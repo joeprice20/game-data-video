@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://btqdfd6cyuwst"]
+
+[ext_resource type="Script" uid="uid://c0jwew42t7khp" path="res://user_interface/inventory_dialog.gd" id="1_scky0"]
+[ext_resource type="PackedScene" uid="uid://bcenbrhhisrs7" path="res://user_interface/item_slot.tscn" id="1_ugddp"]
+
+[node name="InventoryDialog" type="PanelContainer" unique_id=117357406]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_scky0")
+slot_scene = ExtResource("1_ugddp")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=792509280]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1455660464]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=781731238]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Mr. G's Stuff"
+horizontal_alignment = 1
+
+[node name="CloseButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1729408543]
+layout_mode = 2
+text = "X"
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer" unique_id=1657000786]
+unique_name_in_owner = true
+layout_mode = 2
+columns = 5
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/CloseButton" to="." method="_on_close_button_pressed"]

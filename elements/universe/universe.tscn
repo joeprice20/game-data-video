@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://bh2puthtqpbm3" path="res://elements/pickup/pickup.tscn" id="7_hulfw"]
 [ext_resource type="PackedScene" uid="uid://grvayjmmafd5" path="res://elements/dummy/dummy.tscn" id="8_dmw66"]
 [ext_resource type="Resource" uid="uid://hmvfe6rmhrv6" path="res://data/items/sword.tres" id="8_gimcf"]
+[ext_resource type="PackedScene" uid="uid://btqdfd6cyuwst" path="res://user_interface/inventory_dialog.tscn" id="9_gr6k7"]
+[ext_resource type="Script" uid="uid://bygy2uvxpowli" path="res://elements/universe/ui_root.gd" id="9_xc1bc"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_wrhcx"]
 noise_type = 0
@@ -57,3 +59,22 @@ transform = Transform3D(0.349472, 0, -0.936947, 0, 1, 0, 0.936947, 0, 0.349472, 
 [node name="Pickup" parent="." unique_id=338360936 instance=ExtResource("7_hulfw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.108245, 16.311613, 0)
 item_data = ExtResource("8_gimcf")
+
+[node name="Pickup2" parent="." unique_id=956392116 instance=ExtResource("7_hulfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.108245, 16.311613, 3.3116274)
+
+[node name="UIRoot" type="CanvasLayer" parent="." unique_id=105055643]
+script = ExtResource("9_xc1bc")
+
+[node name="InventoryDialog" parent="UIRoot" unique_id=117357406 instance=ExtResource("9_gr6k7")]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.5
+offset_top = -17.5
+offset_right = 58.5
+offset_bottom = 17.5

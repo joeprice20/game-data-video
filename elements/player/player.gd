@@ -11,8 +11,11 @@ extends CharacterBody3D
 ## The camera
 @onready var _camera:Camera = %Camera
 
+var inventory:Inventory = Inventory.new()
+
 
 func on_item_picked_up(item_data : Item):
+	inventory.add_item(item_data);
 	print("I got a ", item_data.name)
 	
 
