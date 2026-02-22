@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://cpwykxcb0bgju" path="res://elements/world/ground037_nrm_rgh.dds" id="3_1y3w3"]
 [ext_resource type="Script" uid="uid://cj36d244hvkui" path="res://elements/pickup.gd" id="7_gimcf"]
 [ext_resource type="PackedScene" uid="uid://grvayjmmafd5" path="res://elements/dummy/dummy.tscn" id="8_dmw66"]
-[ext_resource type="PackedScene" uid="uid://cqqfd6fdo0eiy" path="res://elements/pickaxe/pickaxe.glb" id="8_gr6k7"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_wrhcx"]
 noise_type = 0
@@ -59,10 +58,7 @@ transform = Transform3D(0.349472, 0, -0.936947, 0, 1, 0, 0.936947, 0, 0.349472, 
 [node name="Node3D" type="Node3D" parent="." unique_id=654079799]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.108245, 16.311613, 0)
 script = ExtResource("7_gimcf")
-item_id = "pickaxe"
-
-[node name="pickaxe" parent="Node3D" unique_id=162677070 instance=ExtResource("8_gr6k7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.70497704, 0)
+item_id = "sword"
 
 [node name="Area3D" type="Area3D" parent="Node3D" unique_id=647011191]
 
