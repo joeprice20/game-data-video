@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://bs2e4uoa7lbo7"]
+
+[ext_resource type="Script" uid="uid://bqxolh31nbe87" path="res://item.gd" id="1_0smob"]
+[ext_resource type="PackedScene" uid="uid://cqqfd6fdo0eiy" path="res://elements/pickaxe/pickaxe.glb" id="1_xe13y"]
+
+[resource]
+script = ExtResource("1_0smob")
+name = "Pickaxe"
+scene = ExtResource("1_xe13y")
+metadata/_custom_type_script = "uid://bqxolh31nbe87"

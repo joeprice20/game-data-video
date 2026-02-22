@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bh2puthtqpbm3"]
+
+[ext_resource type="Script" uid="uid://cj36d244hvkui" path="res://elements/pickup/pickup.gd" id="1_86q7n"]
+[ext_resource type="Resource" uid="uid://bs2e4uoa7lbo7" path="res://data/items/pickaxe.tres" id="2_jbiis"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xc1bc"]
+
+[node name="Node3D" type="Node3D" unique_id=338360936]
+script = ExtResource("1_86q7n")
+item_data = ExtResource("2_jbiis")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=462891179]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1573339644]
+shape = SubResource("CapsuleShape3D_xc1bc")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

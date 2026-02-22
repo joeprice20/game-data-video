@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://hmvfe6rmhrv6"]
+
+[ext_resource type="PackedScene" uid="uid://cocxhrbj0jjax" path="res://elements/sword/sword.glb" id="1_lpgsc"]
+[ext_resource type="Script" uid="uid://bqxolh31nbe87" path="res://item.gd" id="1_sxjy2"]
+
+[resource]
+script = ExtResource("1_sxjy2")
+name = "Sword"
+scene = ExtResource("1_lpgsc")
+metadata/_custom_type_script = "uid://bqxolh31nbe87"

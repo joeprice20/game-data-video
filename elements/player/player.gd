@@ -12,8 +12,8 @@ extends CharacterBody3D
 @onready var _camera:Camera = %Camera
 
 
-func on_item_picked_up(item_id : String):
-	print("I got a ", Items.Database[item_id].name)
+func on_item_picked_up(item_data : Item):
+	print("I got a ", item_data.name)
 	
 
 func _physics_process(delta) -> void:
